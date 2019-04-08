@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<!-- key是自己定义的 -->
+<person>
+	<name>鹿晗</name>
+	<skill>dance</skill>
+	<film>盗墓笔记</film>
+</person>

@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>发送post请求的ajax</h1>
+	<input type="text" value="发送post_ajax请求" id="foodText" placeholder="清输入你爱吃的菜">
+	<input type="button" value="发送post_ajax请求" id="btnAjax">
+
+
+	<script type="text/javascript">
+		//获取按钮 绑定事件
+		document.getElementById("btnAjax").onclick=function(){
+			//	异步对象
+			var ajax = new XMLHttpRequest();
+
+			//url method
+			ajax.open('post','01.php');
+
+			//如果使用post发送数据 必须设置如下内容
+			ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			//发送
+			ajax.send('name=jack&age=998');
+
+			//注册事件
+			ajax.onreadystatechange()=function(){
+
+				if(ajax.readyState==4&&ajax.status==200){
+
+					//获取返回的数据
+					ajax.responseText;
+				};
+			};
+		};
+	</script>
+</body>
+</html> 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>通过post提交数据给服务器</h1>
+	<!-- action 设置数据提交给什么地方 -->
+	<!-- 如果要提交数据 form里表单元素必须有name属性 -->
+	<!-- 设置里name属性后 使用get请求 会直接在url后面拼接参数 默认使用的就是get方式 发生数据 -->
+	<!-- php中为我们定义了一个超全局对象 $_GET是一个关系型数组 -->
+
+	<!-- $_POST 跟GET 一样 也是一个关系型数组 $_POST[key] -->
+	<!-- post比get更安全一点 提交的数据看不见 -->
+	
+	<form action="post.php" method="post">
+		<input type="text" name="userName" placeholder="请输入用户名">
+		<br>
+		<input type="text" name="userSkill" placeholder="请输入一个技能">
+		<br>
+		<input type="submit" name="">
+	</form>
+</body>
+</html>
